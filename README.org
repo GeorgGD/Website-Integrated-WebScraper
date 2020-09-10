@@ -1,8 +1,14 @@
 * Website Integrated WebScraper
   This is a web scraper that can be integrated into a website for demonstration purposes.
-
+  
 ** Dependencies
    Junit
    Maven
    Selenium
    Chromedriver
+   Extent Report
+
+*** TODO:
+    1. Learn Spring so I can start!
+    2. Figure out the OOP structure for this program
+    3. Finish this before 30th september
