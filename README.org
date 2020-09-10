@@ -1,2 +1,8 @@
 * Website Integrated WebScraper
   This is a web scraper that can be integrated into a website for demonstration purposes.
+
+** Dependencies
+   Junit
+   Maven
+   Selenium
+   Chromedriver
