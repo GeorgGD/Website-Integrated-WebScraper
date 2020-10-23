@@ -12,4 +12,7 @@
 *** TODO:  
     1. Figure out the OOP structure for this program
     2. Finish this before 30th Oktober
+
+** Trello Board
+   URL: https://trello.com/b/wNsGCSbS/website-integrated-webscraper
        
