@@ -6,4 +6,6 @@ import org.springframework.stereotype.Component;
 public interface Webscraper{
 	
 	void parse();
+
+	void goToUrl(String url);
 }
