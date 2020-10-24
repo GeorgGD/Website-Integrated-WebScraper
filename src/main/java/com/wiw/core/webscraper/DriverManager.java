@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.springframework.stereotype.Component;
 
 @Component
-public interface Webscraper{
+public interface DriverManager{
 
 	void setWebDriver(WebDriver webDriver);
 	
