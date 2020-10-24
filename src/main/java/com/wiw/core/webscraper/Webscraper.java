@@ -9,4 +9,6 @@ public interface Webscraper{
 	void goToUrl(String url);
 
 	String scrapElement(By identifier);
+
+	void closeBrowser();
 }
