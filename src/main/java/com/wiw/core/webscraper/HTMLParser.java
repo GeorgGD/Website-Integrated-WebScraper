@@ -13,6 +13,7 @@ public class HTMLParser implements Webscraper{
 	public HTMLParser() {
 	}
 
+	@Override
 	public void setWebDriver(WebDriver webDriver) {
 		HTMLParser.webDriver = webDriver;
 	}
