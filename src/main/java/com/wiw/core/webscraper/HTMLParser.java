@@ -5,15 +5,19 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class HTMLParser implements Webscraper{
-
-	private WebDriver webdriver;
 	
-	public HTMLParser(){		
+	private static WebDriver webDriver;
+	
+	public HTMLParser() {
 	}
 
+	public void setWebDriver(WebDriver webDriver) {
+		HTMLParser.webDriver = webDriver;
+	}
+	
 	@Override
 	public void parse() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub		
 	}
 	
 }
