@@ -26,4 +26,10 @@ public class WebScraper {
 		WebDriver driver = new ChromeDriver(options);		
 		return driver;
 	}
+
+	public void setDriver() {
+		ChromeOptions options = setupOptions();
+		WebDriver driver = setupWebDriver(options);
+		driverManager.setWebDriver(driver);
+	}
 }
