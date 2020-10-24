@@ -16,13 +16,7 @@ public class HTMLParser implements Webscraper{
 	}
 	
 	@Override
-	public void parse() {
-		// TODO Auto-generated method stub		
-	}
-
-	@Override
 	public void goToUrl(String url) {
-		// TODO Auto-generated method stub
 		webDriver.get(url);
 	}
 
