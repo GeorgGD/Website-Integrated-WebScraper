@@ -22,6 +22,7 @@ public class HTMLParser implements Webscraper{
 		webDriver.get(url);
 	}
 
+	@Override
     public String scrapElement(By identifier) {
 		WebElement element = webDriver.findElement(identifier);
 		
