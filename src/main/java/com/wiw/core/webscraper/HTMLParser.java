@@ -22,9 +22,8 @@ public class HTMLParser implements Webscraper{
 		webDriver.get(url);
 	}
 
-    public String scrapElemById(String elem) {
-		By id = By.id(elem);
-		WebElement element = webDriver.findElement(id);
+    public String scrapElement(By identifier) {
+		WebElement element = webDriver.findElement(identifier);
 		
 		if(element.isSelected()) {
 			return element.getText();
@@ -32,4 +31,6 @@ public class HTMLParser implements Webscraper{
 		
 		return null;
 	}
+
+	
 }
