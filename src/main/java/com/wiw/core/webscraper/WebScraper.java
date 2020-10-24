@@ -1,5 +1,7 @@
 package com.wiw.core.webscraper;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -17,5 +19,11 @@ public class WebScraper {
 							 "--window-size=1920,1080",
 							 "--ignore-certificate-errors");
 		return options;
+	}
+
+	private WebDriver setupWebDriver(ChromeOptions options) {
+		System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver");
+		WebDriver driver = new ChromeDriver(options);		
+		return driver;
 	}
 }
