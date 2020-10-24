@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HTMLParser implements Webscraper{
+public class HTMLParser implements DriverManager{
 	
 	private static WebDriver webDriver;
 	
