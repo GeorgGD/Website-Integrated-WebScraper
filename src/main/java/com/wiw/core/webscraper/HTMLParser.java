@@ -33,5 +33,10 @@ public class HTMLParser implements Webscraper{
 		return null;
 	}
 
-	
+	@Override
+	public void closeBrowser() {
+		if(webDriver != null) {
+			webDriver.quit();
+		}
+	}
 }
