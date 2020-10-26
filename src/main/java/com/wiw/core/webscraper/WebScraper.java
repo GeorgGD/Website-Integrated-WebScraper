@@ -19,8 +19,19 @@ public class WebScraper {
 
 	@Autowired
 	private DriverManager driverManager;
-    	
-	public WebScraper() {
+
+	/**
+	 * Assigns the given value to driverManager 
+	 * @param driverManager The manager for the web scraper	
+	 */	
+	public void setDriverManager(DriverManager driverManager) {
+		if(driverManager == null)
+			return;
+		
+		if(this.driverManager != null)
+			this.driverManager.closeBrowser();
+			
+		this.driverManager = driverManager;
 	}
 	
 	/**
