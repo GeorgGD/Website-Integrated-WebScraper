@@ -1,5 +1,6 @@
 package com.wiw.core.webscraper;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -37,4 +38,9 @@ public class WebScraper {
 		driverManager.setWebDriver(driver);
 	}
 
+	public String scrapElemById(String name) {
+		By identifier = By.id(name);
+		String content = driverManager.scrapElement(identifier);		
+		return content;
+	}
 }
