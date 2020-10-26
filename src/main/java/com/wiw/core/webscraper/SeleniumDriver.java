@@ -37,7 +37,7 @@ class SeleniumDriver implements DriverManager{
 	}
 
 	/**
-	 * Finds the element with the given identifier and 
+	 * Locates the element with the given identifier and 
 	 * collects the contents inside the element
 	 * @param identifier The identifier to use 
 	 * @return The contents inside the element	
