@@ -49,4 +49,10 @@ public class WebScraper {
 		String content = driverManager.scrapElement(identifier);
 		return content;
 	}
+
+	public String scrapElemByClass(String name) {
+		By identifier = By.className(name);
+		String content = driverManager.scrapElement(identifier);
+		return content;
+	}
 }
