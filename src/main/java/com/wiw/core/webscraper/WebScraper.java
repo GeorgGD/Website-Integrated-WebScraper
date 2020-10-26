@@ -21,9 +21,8 @@ public class WebScraper {
 	private DriverManager driverManager;
     	
 	public WebScraper() {
-		setDriver();
 	}
-
+	
 	/**
 	 * Sets up the options for the chrome driver
 	 * @return The chrome driver options
