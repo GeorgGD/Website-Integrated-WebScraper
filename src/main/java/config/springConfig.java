@@ -4,7 +4,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan("com.wiw.core")
+@ComponentScan("com.wiw.core.webscraper")
 public class springConfig {
 	
 }
