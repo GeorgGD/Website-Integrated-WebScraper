@@ -55,4 +55,10 @@ public class WebScraper {
 		String content = driverManager.scrapElement(identifier);
 		return content;
 	}
+
+	public String scrapElemByXpath(String name) {
+		By identifier = By.xpath(name);
+		String content = driverManager.scrapElement(identifier);
+		return content;
+	}
 }
