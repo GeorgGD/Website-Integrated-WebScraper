@@ -11,7 +11,11 @@ public class WebScraper {
 
 	@Autowired
 	private DriverManager driverManager;
-
+    	
+	public WebScraper() {
+		setDriver();
+	}
+	
 	private ChromeOptions setupOptions() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless",
@@ -32,4 +36,5 @@ public class WebScraper {
 		WebDriver driver = setupWebDriver(options);
 		driverManager.setWebDriver(driver);
 	}
+
 }
