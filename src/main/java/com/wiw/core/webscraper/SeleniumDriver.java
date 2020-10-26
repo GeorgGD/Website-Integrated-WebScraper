@@ -5,17 +5,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.springframework.stereotype.Component;
 
+/**
+ * Class for 
+ */
 @Component
-class HTMLParser implements DriverManager{
+class SeleniumDriver implements DriverManager{
 	
 	private static WebDriver webDriver;
 	
-	public HTMLParser() {
+	public SeleniumDriver() {
 	}
 
 	@Override
 	public void setWebDriver(WebDriver webDriver) {
-		HTMLParser.webDriver = webDriver;
+		SeleniumDriver.webDriver = webDriver;
 	}
 	
 	@Override
