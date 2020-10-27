@@ -35,6 +35,12 @@ public class WebScraperTest {
 		assertNotNull(webScraper);
 		webScraper.closeDriver();
 	}
-
 	
+	@Test
+	public void goToUrlTest() {
+		String expectedUrl = "http://www.georgiosdavakos.com";
+		webScraper.goToUrl(expectedUrl);
+		String url = webScraper.currentLocation();
+		assertEquals(expectedUrl, url);
+	}
 }
