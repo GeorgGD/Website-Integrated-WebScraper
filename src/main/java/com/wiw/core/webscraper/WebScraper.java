@@ -123,4 +123,9 @@ public class WebScraper {
 	public void closeDriver() {
 		driverManager.closeBrowser();
 	}
+
+	public String currentLocation() {
+		String url = driverManager.currentUrl();
+		return url;
+	}
 }
