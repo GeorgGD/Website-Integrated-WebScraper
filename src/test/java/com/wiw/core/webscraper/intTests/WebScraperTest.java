@@ -2,10 +2,10 @@ package com.wiw.core.webscraper.intTests;
 
 import com.wiw.core.webscraper.WebScraper;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
 import static org.junit.Assert.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +33,19 @@ public class WebScraperTest {
 	@Test
 	public void springAutowiredTest() {
 		assertNotNull(webScraper);
+	}
+
+	@After
+	public void closeDriver() {
 		webScraper.closeDriver();
 	}
 	
 	@Test
 	public void goToUrlTest() {
-		String expectedUrl = "http://www.georgiosdavakos.com";
+		String expectedUrl = "https://www.georgiosdavakos.se";
 		webScraper.goToUrl(expectedUrl);
 		String url = webScraper.currentLocation();
+		expectedUrl = expectedUrl + "/";
 		assertEquals(expectedUrl, url);
 	}
 }
