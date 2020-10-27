@@ -45,13 +45,8 @@ class SeleniumDriver implements DriverManager{
 	@Override
     public String scrapElement(By identifier) {
 		WebElement element = webDriver.findElement(identifier);
-		
-		if(element.isSelected()) {
-			return element.getText();
-		}
-		
-		return null;
-	}
+		return element.getText();		
+   	}
 	
 	/**
 	 * Shuts down the driver 
