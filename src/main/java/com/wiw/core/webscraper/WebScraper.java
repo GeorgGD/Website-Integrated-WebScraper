@@ -119,4 +119,8 @@ public class WebScraper {
 		String content = driverManager.scrapElement(identifier);
 		return content;
 	}
+
+	public void closeDriver() {
+		driverManager.closeBrowser();
+	}
 }
