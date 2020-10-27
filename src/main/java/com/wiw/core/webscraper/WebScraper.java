@@ -69,6 +69,14 @@ public class WebScraper {
 	}
 
 	/**
+	 * Takes web driver to the given url	
+	 * @param url The desired url
+	 */	
+	public void goToUrl(String url) {
+		driverManager.goToUrl(url);
+	}
+	
+	/**
 	 * Collects the contents of the element with the given identifier
 	 * @param name The name of the identifier
 	 * @return The contents of the element	
