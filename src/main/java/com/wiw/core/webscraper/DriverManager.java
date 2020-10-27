@@ -37,6 +37,9 @@ public interface DriverManager{
 	 */
 	void closeBrowser();
 
-	
+	/**
+	 * Provides the current url that the driver is at the moment
+	 * @return The current url
+	 */	
 	String currentUrl();
 }
