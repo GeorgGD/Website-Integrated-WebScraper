@@ -19,13 +19,13 @@ import config.springConfig;
 @ContextConfiguration(locations = "../../main/java/config/", classes = springConfig.class, loader = AnnotationConfigContextLoader.class)
 public class WebScraperTest {
 
-	@Autowired
+  
 	private WebScraper webScraper;
 
-	@Before
+	/*	@Before
 	public void setup() {
 		webScraper.setDriver();
-	}
+		}*/
 	
 	@Test
 	public void setDriverTest() {
