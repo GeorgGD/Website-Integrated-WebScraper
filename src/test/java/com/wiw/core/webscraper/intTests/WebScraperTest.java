@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
 import static org.junit.Assert.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.annotation.Order;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -21,14 +22,19 @@ public class WebScraperTest {
 	@Autowired
 	private WebScraper webScraper;
 
-	/*	@Before
+	@Before
+	@Order(2)
 	public void setup() {
 		webScraper.setDriver();
-		}*/
-	
+	}
+
+	@Before
+	@Order(1)
 	@Test
 	public void springAutowiredTest() {
 		assertNotNull(webScraper);
 		webScraper.closeDriver();
 	}
+
+	
 }
