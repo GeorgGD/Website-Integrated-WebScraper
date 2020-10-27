@@ -44,6 +44,7 @@ public class WebScraper {
 							 "--disable-gpu",
 							 "--window-size=1920,1080",
 							 "--ignore-certificate-errors");
+		options.setBinary("/usr/bin/google-chrome");
 		return options;
 	}
 
