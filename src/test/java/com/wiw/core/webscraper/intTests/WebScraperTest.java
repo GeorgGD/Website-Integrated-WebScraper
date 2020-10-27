@@ -48,4 +48,14 @@ public class WebScraperTest {
 		expectedUrl = expectedUrl + "/";
 		assertEquals(expectedUrl, url);
 	}
+
+	@Test
+	public void scrapElemByIdTest() {
+		String id = "h-Braattvetaomriskerochavkastning";
+		String expectedText = "Bra att veta om risker och avkastning.";
+		String url = "https://www.nordnet.se/se";
+		webScraper.goToUrl(url);
+		String actualText = webScraper.scrapElemById(id);
+		assertEquals(expectedText, actualText);
+	}
 }
