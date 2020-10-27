@@ -1,6 +1,7 @@
 package com.wiw.core.webscraper;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.springframework.stereotype.Component;
@@ -44,8 +45,13 @@ class SeleniumDriver implements DriverManager{
 	 */
 	@Override
     public String scrapElement(By identifier) {
+		try{
 		WebElement element = webDriver.findElement(identifier);
-		return element.getText();		
+		return element.getText();
+		} catch(NoSuchElementException e) {
+			// TODO: Log identifier, url and time
+			return null;
+		}
    	}
 	
 	/**
