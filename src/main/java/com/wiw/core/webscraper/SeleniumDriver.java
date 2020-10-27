@@ -64,6 +64,10 @@ class SeleniumDriver implements DriverManager{
 		}
 	}
 
+	/**
+	 * Provides the current url that the driver is at the moment
+	 * @return The current url
+	 */
 	@Override
 	public String currentUrl() {
 		String url = webDriver.getCurrentUrl();
