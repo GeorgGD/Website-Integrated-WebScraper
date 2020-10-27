@@ -36,4 +36,7 @@ public interface DriverManager{
 	 * Shuts down the driver 
 	 */
 	void closeBrowser();
+
+	
+	String currentUrl();
 }
