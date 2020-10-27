@@ -120,10 +120,17 @@ public class WebScraper {
 		return content;
 	}
 
+	/**
+	 * Shuts down the web driver
+	 */
 	public void closeDriver() {
 		driverManager.closeBrowser();
 	}
 
+	/**
+	 * Provides the current url that the driver is at the moment
+	 * @return The current url
+	 */
 	public String currentLocation() {
 		String url = driverManager.currentUrl();
 		return url;
