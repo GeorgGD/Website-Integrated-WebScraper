@@ -54,6 +54,11 @@ public class WebScraperTest {
 	public void closeDriver() {
 		webScraper.closeDriver();
 	}
+
+	@After
+	public void createExtentReportPage() {
+		extentReport.flush();
+	}
 	
 	@Test
 	public void goToUrlTest() {
