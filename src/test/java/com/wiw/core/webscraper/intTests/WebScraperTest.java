@@ -2,6 +2,8 @@ package com.wiw.core.webscraper.intTests;
 
 import com.wiw.core.webscraper.WebScraper;
 
+import config.springConfig;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,7 +15,8 @@ import org.springframework.core.annotation.Order;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import config.springConfig;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = springConfig.class)
@@ -22,14 +25,26 @@ public class WebScraperTest {
 	@Autowired
 	private WebScraper webScraper;
 
+	@Autowired
+	ExtentReports extentReport;
+	
+	ExtentSparkReporter spark;
+
 	@Before
-	@Order(2)
+	@Order(1)
+	public void extentReportSetup() {
+		spark = new ExtentSparkReporter("./extentReport.html");
+	   extentReport.attachReporter(spark);
+	}
+	
+	@Before
+	@Order(3)
 	public void setup() {
 		webScraper.setDriver();
 	}
 
 	@Before
-	@Order(1)
+	@Order(2)
 	@Test
 	public void springAutowiredTest() {
 		assertNotNull(webScraper);
