@@ -16,6 +16,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -26,9 +27,9 @@ public class WebScraperTest {
 	private WebScraper webScraper;
 
 	@Autowired
-	ExtentReports extentReport;
+	private ExtentReports extentReport;
 	
-	ExtentSparkReporter spark;
+	private ExtentSparkReporter spark;
 
 	@Before
 	@Order(1)
