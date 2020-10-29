@@ -70,4 +70,14 @@ public class WebScraperTest {
 		String actualTest = webScraper.scrapElemByClass(className);
 		assertEquals(expectedText, actualTest);
 	}
+
+	@Test
+	public void scrapElemByXpathTest() {
+		String xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]/div[2]/h1[1]";
+		String expectedText = "Learn to code at home.";
+		String url = "https://www.freecodecamp.org";
+		webScraper.goToUrl(url);
+		String actualTest = webScraper.scrapElemByXpath(xpath);
+		assertEquals(expectedText, actualTest);
+	}
 }
