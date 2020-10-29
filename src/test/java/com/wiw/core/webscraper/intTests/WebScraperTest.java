@@ -60,4 +60,14 @@ public class WebScraperTest {
 		String actualText = webScraper.scrapElemById(id);
 		assertEquals(expectedText, actualText);
 	}
+
+	@Test
+	public void scrapElemByClassTest() {
+		String className = "big-heading";
+		String expectedText = "Learn to code at home.";
+		String url = "https://www.freecodecamp.org";
+		webScraper.goToUrl(url);
+		String actualTest = webScraper.scrapElemByClass(className);
+		assertEquals(expectedText, actualTest);
+	}
 }
