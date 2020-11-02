@@ -7,7 +7,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @ComponentScan("com.wiw.core.webscraper")
-public class springConfig {
+public class SpringConfig {
 
 	@Bean
 	public InternalResourceViewResolver viewResolver() {
