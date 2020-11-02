@@ -2,7 +2,7 @@ package com.wiw.core.webscraper.intTests;
 
 import com.wiw.core.webscraper.WebScraper;
 
-import config.springConfig;
+import config.SpringConfig;
 
 import org.junit.After;
 import org.junit.Before;
@@ -16,7 +16,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = springConfig.class)
+@ContextConfiguration(classes = SpringConfig.class)
 public class WebScraperTest {
 
 	@Autowired
