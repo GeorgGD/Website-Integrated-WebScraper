@@ -69,9 +69,11 @@
 	     <div class="form-group row">
 	       <label for="ByString" class="col-sm-3 col-form-label"> Provide element name: </label>
 	       <input class="form-control col-sm-3" type="text" name="ByString"><br>
-	    </div>
-	    <button type="submit" class="btn btn-primary">Submit</button>
-	    
+	     </div>
+	     <div class="row">
+	       <div class="col-sm-3"></div>
+	       <button type="submit" class="btn btn-primary col-sm-3">Scrap</button>
+	     </div>
        </form>
   </div>
 
