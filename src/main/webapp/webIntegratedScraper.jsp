@@ -55,17 +55,23 @@
 
   <h1 class="font-weight-bold text-center mt-4 display-3">Web Integrated<span class="orange">Scraper</span></h1>
   <div class="container mt-3">
+  
        <form action="scrap">
-       	     <label for="scrapBy">Scrap by: </label>
-       	     <select name="scrapBy">
+       	     <div class="form-group row">
+       	     	  <label for="scrapBy" class="col-sm-3 col-form-label">Scrap by: </label>
+       	     	  <select class="form-control col-sm-3" name="scrapBy">
 	     	     <option value="ById">By Id </option>
 		     <option value="ByName">By Name </option>
 		     <option value="ByClass">By Class </option>
 		     <option value="ByXpath">By Xpath </option>
-	     </select><br>
-	     <label for="ByString">
-	     <input type="text" name="ByString"><br>
-	     <input type="submit">
+	     	  </select><br>
+	     </div>
+	     <div class="form-group row">
+	       <label for="ByString" class="col-sm-3 col-form-label"> Provide element name: </label>
+	       <input class="form-control col-sm-3" type="text" name="ByString"><br>
+	    </div>
+	    <button type="submit" class="btn btn-primary">Submit</button>
+	    
        </form>
   </div>
 
