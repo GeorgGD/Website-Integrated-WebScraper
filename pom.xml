@@ -2,7 +2,10 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.headlessWebScraper</groupId>
   <artifactId>Headless-WebScraper</artifactId>
+  <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
+  <name>Website Integrated WebScraper</name>
+  <url>http://maven.apache.org</url>
 
   <properties>
     <maven.compiler.release>11</maven.compiler.release>
@@ -60,6 +63,20 @@
       <scope>test</scope>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>5.2.9.RELEASE</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+    
   </dependencies>
 
   <build>
