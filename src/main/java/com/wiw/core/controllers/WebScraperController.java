@@ -20,7 +20,7 @@ public class WebScraperController {
 	 * 3. Scrap the element
 	 * 4. Return the scraped element
 	 */
-	@RequestMapping("scrap")
+	@RequestMapping("/scrap")
 	public ModelAndView scrap(@RequestParam("url") String url, @RequestParam("scrapBy") String byIdent, @RequestParam("attributeName") String attributeName) {
 		if(!webScraper.hasDriverSetup())
 			webScraper.setDriver();
