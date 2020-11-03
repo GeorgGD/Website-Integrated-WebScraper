@@ -14,12 +14,18 @@ public class WebScraperController {
 	@Autowired
 	private WebScraper webScraper;
 
+	/*
+	 * 1. Navigate to the url
+	 * 2. Figure out which scrapBy method to use
+	 * 3. Scrap the element
+	 * 4. Return the scraped element
+	 */
 	@RequestMapping("scrap")
-	public ModelAndView scrap(@RequestParam("url") String url, @RequestParam("scrapBy") String byident) {
+	public ModelAndView scrap(@RequestParam("url") String url, @RequestParam("scrapBy") String byIdent, @RequestParam("attributeName") String attributeName) {
 		
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("");
-		mav.addObject("result", null);
+		mav.setViewName("webIntegratedScraper");
+		mav.addObject("scrapResult", null);
 
 		return mav;
 	}
