@@ -20,6 +20,8 @@ public class WebScraper {
 	@Autowired
 	private DriverManager driverManager;
 
+	private boolean hasDriver = false;
+	
 	/**
 	 * Assigns the given value to driverManager 
 	 * @param driverManager The manager for the web scraper	
@@ -66,6 +68,7 @@ public class WebScraper {
 		ChromeOptions options = setupOptions();
 		WebDriver driver = setupWebDriver(options);
 		driverManager.setWebDriver(driver);
+		this.hasDriver = true;
 	}
 
 	/**
