@@ -13,7 +13,7 @@ public class SpringConfig {
 	@Bean
 	public InternalResourceViewResolver viewResolver() {
 		InternalResourceViewResolver vr = new InternalResourceViewResolver();
-		vr.setPrefix("/WEB-INF/");
+		vr.setPrefix("/");
 		vr.setSuffix(".jsp");
 		return vr;
 	}
