@@ -81,11 +81,22 @@
 	  <button type="submit" class="btn btn-primary col-sm-3">Scrap</button>
 	</div>
       </form>
+	
     </div>
-
-    <p>
-      ${scrapResult}
-    </p>
+    
+    <div class="container mt-3">
+      <div class="card"> 
+	<div class="card-header">
+	  The Result:
+	</div>
+	<div class="card-body">
+	  <p class="card-text">
+	    ${scrapResult}
+	  </p>
+	</div>
+      </div>
+    </div>
+    
     <footer class="indigo mt-3 pt-2">
 
       <div class="container">
