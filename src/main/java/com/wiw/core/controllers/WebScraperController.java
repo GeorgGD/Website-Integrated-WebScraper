@@ -22,10 +22,16 @@ public class WebScraperController {
 	 */
 	@RequestMapping("scrap")
 	public ModelAndView scrap(@RequestParam("url") String url, @RequestParam("scrapBy") String byIdent, @RequestParam("attributeName") String attributeName) {
+		if(!webScraper.hasDriverSetup())
+			webScraper.setDriver();
+
+		// handle url not found exception!
+		webScraper.goToUrl(url);
+		String scrapedStr = whichByIdent(byIdent, attributeName);
 		
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("webIntegratedScraper");
-		mav.addObject("scrapResult", null);
+		mav.addObject("scrapResult", scrapedStr);
 
 		return mav;
 	}
