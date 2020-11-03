@@ -35,6 +35,7 @@ class SeleniumDriver implements DriverManager{
 	@Override
 	public void goToUrl(String url) {
 		webDriver.get(url);
+		// TODO: Needs to handles incorrect url and when url doesn't lead to a website
 	}
 
 	/**
@@ -46,8 +47,8 @@ class SeleniumDriver implements DriverManager{
 	@Override
     public String scrapElement(By identifier) {
 		try{
-		WebElement element = webDriver.findElement(identifier);
-		return element.getText();
+			WebElement element = webDriver.findElement(identifier);
+			return element.getText();
 		} catch(NoSuchElementException e) {
 			// TODO: Log identifier, url and time
 			return null;
