@@ -128,6 +128,7 @@ public class WebScraper {
 	 */
 	public void closeDriver() {
 		driverManager.closeBrowser();
+		this.hasDriver = false;
 	}
 
 	/**
@@ -137,5 +138,13 @@ public class WebScraper {
 	public String currentLocation() {
 		String url = driverManager.currentUrl();
 		return url;
+	}
+
+	/**
+	 * Checks if driver has been setup
+	 * @return True if driver has been setup	
+	 */
+	public boolean hasDriverSetup() {		
+		return this.hasDriver;
 	}
 }
