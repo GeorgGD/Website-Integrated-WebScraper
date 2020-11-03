@@ -25,8 +25,10 @@ public class WebScraperController {
 		if(!webScraper.hasDriverSetup())
 			webScraper.setDriver();
 
-		// handle url not found exception!
+		// TODO: Needs to handle url not found exception!
 		webScraper.goToUrl(url);
+
+		// TODO: Needs to handle element not found exception 
 		String scrapedStr = whichByIdent(byIdent, attributeName);
 		
 		ModelAndView mav = new ModelAndView();
