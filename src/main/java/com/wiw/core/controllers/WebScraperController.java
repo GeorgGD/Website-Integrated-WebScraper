@@ -37,4 +37,20 @@ public class WebScraperController {
 
 		return mav;
 	}
+
+	private String whichByIdent(String byIdent, String attributeName) {
+		String scrapedStr;
+		
+		if(byIdent.equals("ById")) {
+			scrapedStr = webScraper.scrapElemById(attributeName);
+		} else if(byIdent.equals("ByName")) {
+			scrapedStr = webScraper.scrapElemByName(attributeName);
+		} else if(byIdent.equals("ByClass")) {
+			scrapedStr = webScraper.scrapElemByClass(attributeName);
+		} else {
+			scrapedStr = webScraper.scrapElemByXpath(attributeName);
+		}
+		
+		return scrapedStr;
+	}
 }
