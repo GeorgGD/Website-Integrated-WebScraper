@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" isELIgnored="false"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,7 +74,7 @@
 	</div>
 	<div class="form-group row">
 	  <label for="ByString" class="col-sm-3 col-form-label">Attribute name: </label>
-	  <input class="form-control col-sm-3" type="text" name="ByString" placeholder="Text"><br>
+	  <input class="form-control col-sm-3" type="text" name="attributeName" placeholder="Text"><br>
 	</div>
 	<div class="row">
 	  <div class="col-sm-3"></div>
@@ -81,6 +83,9 @@
       </form>
     </div>
 
+    <p>
+      ${scrapResult}
+    </p>
     <footer class="indigo mt-3 pt-2">
 
       <div class="container">
