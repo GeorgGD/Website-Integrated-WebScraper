@@ -32,7 +32,7 @@ public class WebScraperController {
 		String scrapedStr = whichByIdent(byIdent, attributeName);
 		
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("webIntegratedScraper");
+		mav.setViewName("webIntegratedScraper.jsp");
 		mav.addObject("scrapResult", scrapedStr);
 
 		return mav;
