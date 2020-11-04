@@ -56,7 +56,7 @@ public class WebScraper {
 	 * @return The web driver	
 	 */
 	private WebDriver setupWebDriver(ChromeOptions options) {
-		System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
 		WebDriver driver = new ChromeDriver(options);		
 		return driver;
 	}
