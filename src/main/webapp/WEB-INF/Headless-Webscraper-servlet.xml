@@ -12,6 +12,6 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context-2.5.xsd ">
 
 <ctx:annotation-config></ctx:annotation-config>
-<ctx:component-scan base-package="com.wiw.core.controllers"></ctx:component-scan>
+<ctx:component-scan base-package="com.wiw.core"></ctx:component-scan>
 
 </beans>
