@@ -9,10 +9,15 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @ComponentScan(basePackages = {"com.wiw.core.webscraper", "com.wiw.core.controllers"})
 public class SpringConfig {
 
+	/**
+	 * Meant to allow your controllers from refering to files without the need
+	 * of using file type
+	 * @return the view class
+	 */
 	@Bean
 	public InternalResourceViewResolver viewResolver() {
 		InternalResourceViewResolver vr = new InternalResourceViewResolver();
-		vr.setPrefix("/");
+		vr.setPrefix("/WEB-INF/");
 		vr.setSuffix(".jsp");
 		return vr;
 	}
