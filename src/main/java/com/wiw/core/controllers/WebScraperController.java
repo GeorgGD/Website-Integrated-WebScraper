@@ -49,6 +49,12 @@ public class WebScraperController {
 		}
 	}
 
+	/**
+	 * A helper function to scrap-method, sets up the model and view
+	 * @param mav The model and view
+	 * @param scrapedStr the string that the model and view should hold
+	 * @return the modefied model and view	
+	 */	
 	private ModelAndView setupModelAndView(ModelAndView mav, String scrapedStr) {
 		mav.setViewName("webIntegratedScraper.jsp");
 		mav.addObject("scrapResult", scrapedStr);		
