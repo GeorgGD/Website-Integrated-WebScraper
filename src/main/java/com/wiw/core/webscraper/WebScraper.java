@@ -34,6 +34,7 @@ public class WebScraper {
 			this.driverManager.closeBrowser();
 			
 		this.driverManager = driverManager;
+		this.hasDriver = true;
 	}
 	
 	/**
