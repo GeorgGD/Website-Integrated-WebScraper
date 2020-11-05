@@ -13,5 +13,9 @@ public class URLNotFoundException extends Exception {
 		this.errorMsg = msg;
 		this.webDriverException = e;
 	}
+
+	public WebDriverException getWebDriverException() {
+		return webDriverException;
+	}
 	
 }
