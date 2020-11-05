@@ -21,8 +21,9 @@ public interface DriverManager{
 	/**
 	 * Takes the driver to the given url
 	 * @param url The url to use	
+	 * @throws URLNotFoundException when url doesn't lead to a website
 	 */
-	void goToUrl(String url);
+	void goToUrl(String url) throws URLNotFoundException;
 
 	/**
 	 * Locates the element with the given identifier and 
