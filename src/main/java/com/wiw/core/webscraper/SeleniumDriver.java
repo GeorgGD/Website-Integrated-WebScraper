@@ -3,6 +3,7 @@ package com.wiw.core.webscraper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.springframework.stereotype.Component;
 
@@ -31,11 +32,18 @@ class SeleniumDriver implements DriverManager{
 	/**
 	 * Takes the driver to the given url
 	 * @param url The url to use	
+	 * @throws URLNotFoundException when url doesn't lead to a website
 	 */
 	@Override
-	public void goToUrl(String url) {
-		webDriver.get(url);
-		// TODO: Needs to handles incorrect url and when url doesn't lead to a website
+	public void goToUrl(String url) throws URLNotFoundException {
+		try{
+			webDriver.get(url);
+			// TODO: Needs to handles incorrect url and when url doesn't lead to a website
+		} catch (WebDriverException e) {
+			// log exception...
+			String msg = "Incorrect url: " + url + "\n" + e;
+			throw new URLNotFoundException(msg, e);
+		}
 	}
 
 	/**
