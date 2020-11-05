@@ -32,8 +32,12 @@ public class WebScraperController {
 	public ModelAndView scrap(@RequestParam("url") String url, @RequestParam("scrapBy") String byIdent, @RequestParam("attributeName") String attributeName) {
 		if(!webScraper.hasDriverSetup())
 			webScraper.setDriver();
+
 		String scrapedStr;
 		ModelAndView mav = new ModelAndView();
+		if(url == null || url.equals("") || attributeName == null || attributeName.equals("")) {
+			scrapedStr = "ERROR: One of the fields were left empty! \nPlease try again.";
+		}
 		try {
 			webScraper.goToUrl(url);
 				
