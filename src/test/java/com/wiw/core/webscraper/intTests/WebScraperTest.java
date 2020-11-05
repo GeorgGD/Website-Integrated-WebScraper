@@ -1,5 +1,6 @@
 package com.wiw.core.webscraper.intTests;
 
+import com.wiw.core.webscraper.URLNotFoundException;
 import com.wiw.core.webscraper.WebScraper;
 
 import config.SpringConfig;
@@ -41,7 +42,7 @@ public class WebScraperTest {
 	}
 	
 	@Test
-	public void goToUrlTest() {
+	public void goToUrlTest() throws URLNotFoundException {
     	String expectedUrl;
 		String url = "";
 		expectedUrl = "https://www.georgiosdavakos.se";
@@ -52,7 +53,7 @@ public class WebScraperTest {
 	}
     
 	@Test
-	public void scrapElemByIdTest() {
+	public void scrapElemByIdTest() throws URLNotFoundException {
     	String id = "h-Braattvetaomriskerochavkastning";
 		String expectedText = "Bra att veta om risker och avkastning.";
 		String url = "https://www.nordnet.se/se";
@@ -62,7 +63,7 @@ public class WebScraperTest {
 	}
 
 	@Test
-	public void scrapElemByClassTest() {
+	public void scrapElemByClassTest() throws URLNotFoundException {
 		String className = "big-heading";
 		String expectedText = "Learn to code at home.";
 		String url = "https://www.freecodecamp.org";
@@ -72,7 +73,7 @@ public class WebScraperTest {
 	}
 
 	@Test
-	public void scrapElemByXpathTest() {
+	public void scrapElemByXpathTest() throws URLNotFoundException {
 		String xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]/div[2]/h1[1]";
 		String expectedText = "Learn to code at home.";
 		String url = "https://www.freecodecamp.org";
