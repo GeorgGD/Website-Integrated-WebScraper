@@ -5,6 +5,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+
+/**
+ * Configuration class for spring project
+ * @autor Georgios Davakos
+ * @since 2020-11-05
+ */
 @Configuration
 @ComponentScan(basePackages = {"com.wiw.core.webscraper", "com.wiw.core.controllers"})
 public class SpringConfig {
