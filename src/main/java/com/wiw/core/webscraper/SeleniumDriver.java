@@ -53,14 +53,9 @@ class SeleniumDriver implements DriverManager{
 	 * @return The contents inside the element	
 	 */
 	@Override
-    public String scrapElement(By identifier) {
-		try{
-			WebElement element = webDriver.findElement(identifier);
-			return element.getText();
-		} catch(NoSuchElementException e) {
-			// TODO: Log identifier, url and time
-			return null;
-		}
+    public String scrapElement(By identifier) {	    
+		WebElement element = webDriver.findElement(identifier);
+		return element.getText();
    	}
 	
 	/**
