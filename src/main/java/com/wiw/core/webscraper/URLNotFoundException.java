@@ -14,6 +14,10 @@ public class URLNotFoundException extends Exception {
 	
 	private static final long serialVersionUID = 1L;
 
+	public URLNotFoundException(String msg) {
+		this.errorMsg = msg;
+	}
+	
 	public URLNotFoundException(String msg, WebDriverException e) {
 		this.errorMsg = msg;
 		this.webDriverException = e;
