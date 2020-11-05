@@ -17,5 +17,9 @@ public class URLNotFoundException extends Exception {
 	public WebDriverException getWebDriverException() {
 		return webDriverException;
 	}
-	
+
+	@Override
+	public String toString() {
+		return errorMsg;
+	}
 }
