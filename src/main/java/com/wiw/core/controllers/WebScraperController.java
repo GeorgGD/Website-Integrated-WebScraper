@@ -3,6 +3,7 @@ package com.wiw.core.controllers;
 import com.wiw.core.webscraper.URLNotFoundException;
 import com.wiw.core.webscraper.WebScraper;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,14 +37,17 @@ public class WebScraperController {
 		try {
 			webScraper.goToUrl(url);
 				
-			// TODO: Needs to handle element not found exception 
-			scrapedStr = whichByIdent(byIdent, attributeName);
+		    scrapedStr = whichByIdent(byIdent, attributeName);
 			
 			mav = setupModelAndView(mav, scrapedStr);
 			
 			return mav;
 		} catch (URLNotFoundException e) {
 			scrapedStr = "ERROR: The url you provided (" + url + ") was incorrect! \nPlease try again.";
+			mav = setupModelAndView(mav, scrapedStr);
+			return mav;
+		} catch (NoSuchElementException e) {
+			scrapedStr = "ERROR: Their was no element with the given attribute name! \nPlease try again.";
 			mav = setupModelAndView(mav, scrapedStr);
 			return mav;
 		}
