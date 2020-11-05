@@ -73,7 +73,7 @@ class SeleniumDriver implements DriverManager{
 	 */
 	@Override
 	public String currentUrl() {
-		if (this.webDriver != null) {
+		if (SeleniumDriver.webDriver != null) {
 			String url = webDriver.getCurrentUrl();
 			return url;
 		} else {
