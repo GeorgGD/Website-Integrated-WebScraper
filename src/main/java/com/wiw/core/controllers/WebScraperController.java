@@ -1,5 +1,6 @@
 package com.wiw.core.controllers;
 
+import com.wiw.core.webscraper.URLNotFoundException;
 import com.wiw.core.webscraper.WebScraper;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,20 +31,30 @@ public class WebScraperController {
 	public ModelAndView scrap(@RequestParam("url") String url, @RequestParam("scrapBy") String byIdent, @RequestParam("attributeName") String attributeName) {
 		if(!webScraper.hasDriverSetup())
 			webScraper.setDriver();
-
-		// TODO: Needs to handle url not found exception!
-		webScraper.goToUrl(url);
-
-		// TODO: Needs to handle element not found exception 
-		String scrapedStr = whichByIdent(byIdent, attributeName);
-		
+		String scrapedStr;
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("webIntegratedScraper.jsp");
-		mav.addObject("scrapResult", scrapedStr);
-
-		return mav;
+		try {
+			webScraper.goToUrl(url);
+				
+			// TODO: Needs to handle element not found exception 
+			scrapedStr = whichByIdent(byIdent, attributeName);
+			
+			mav = setupModelAndView(mav, scrapedStr);
+			
+			return mav;
+		} catch (URLNotFoundException e) {
+			scrapedStr = "ERROR: The url you provided (" + url + ") was incorrect! \nPlease try again.";
+			mav = setupModelAndView(mav, scrapedStr);
+			return mav;
+		}
 	}
 
+	private ModelAndView setupModelAndView(ModelAndView mav, String scrapedStr) {
+		mav.setViewName("webIntegratedScraper.jsp");
+		mav.addObject("scrapResult", scrapedStr);		
+		return mav;
+	}
+	
 	/**
 	 * A helper function to scrap-method, scraps the website for the given 
 	 * identifier and attributeName
