@@ -77,7 +77,8 @@ public class WebScraper {
 	 * @param url The desired url
 	 */	
 	public void goToUrl(String url) {
-		driverManager.goToUrl(url);
+		if(hasDriver)
+			driverManager.goToUrl(url);
 	}
 	
 	/**
