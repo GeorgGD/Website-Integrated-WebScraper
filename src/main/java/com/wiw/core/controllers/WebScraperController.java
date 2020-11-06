@@ -35,9 +35,13 @@ public class WebScraperController {
 
 		String scrapedStr;
 		ModelAndView mav = new ModelAndView();
+
 		if(url == null || url.equals("") || attributeName == null || attributeName.equals("")) {
 			scrapedStr = "ERROR: One of the fields were left empty! \nPlease try again.";
+			mav = setupModelAndView(mav, scrapedStr);
+			return mav;
 		}
+		
 		try {
 			webScraper.goToUrl(url);
 				
