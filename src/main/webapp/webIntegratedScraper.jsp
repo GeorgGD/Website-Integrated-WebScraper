@@ -55,7 +55,7 @@
       </div>
     </div>
 
-    <h1 class="font-weight-bold text-center mt-4 display-3">Web Integrated<span class="orange">Scraper</span></h1>
+    <h1 class="font-weight-bold text-center mt-4 display-3">Web Integrated <span class="orange">Scraper</span></h1>
     <div class="container mt-3">
       
       <form action="scrap">
@@ -78,7 +78,7 @@
 	</div>
 	<div class="row">
 	  <div class="col-sm-3"></div>
-	  <button type="submit" class="btn btn-primary col-sm-3">Scrap</button>
+	  <button type="submit" class="btn orange-bg text-white col-sm-3"><b>Scrap</b></button>
 	</div>
       </form>
 	
