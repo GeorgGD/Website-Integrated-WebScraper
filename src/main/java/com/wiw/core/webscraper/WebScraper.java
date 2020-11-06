@@ -34,6 +34,7 @@ public class WebScraper {
 			this.driverManager.closeBrowser();
 			
 		this.driverManager = driverManager;
+		this.hasDriver = true;
 	}
 	
 	/**
@@ -74,9 +75,11 @@ public class WebScraper {
 	/**
 	 * Takes web driver to the given url	
 	 * @param url The desired url
+	 * @throws URLNotFoundException when url doesn't lead to a website
 	 */	
-	public void goToUrl(String url) {
-		driverManager.goToUrl(url);
+	public void goToUrl(String url) throws URLNotFoundException {
+		if(hasDriver)
+			driverManager.goToUrl(url);
 	}
 	
 	/**

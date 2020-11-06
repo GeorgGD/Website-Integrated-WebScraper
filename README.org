@@ -1,18 +1,21 @@
 * Website Integrated WebScraper
-  This is a web scraper that can be integrated into a website for demonstration purposes.
+  The following project, Website Integrated WebScraper, is a web application built using
+  the spring framework. This project is meant for learning and demonstration purposes, 
+  it isn't meant to be a product or used for sophisticated projects. 
   
 ** Dependencies
-   Junit
-   Maven
-   Selenium
-   Chromedriver
-   Extent Report
-   Spring 
+  - Junit
+  - Maven
+  - Selenium
+  - Extent Report
+  - Spring Framework
+  - javax.servlet 
 
-*** TODO:  
-    1. Figure out the OOP structure for this program
-    2. Finish this before 30th Oktober
+** How to run the demo 
+  If you would like to run this project on your computer make sure you are using a
+  web container such as Tomcat. Then proceed to run/open the "webIntegratedScraper.jsp" using
+  your web container. You will be greeted by a form where you will be instructed to fill in the
+  empty fields. Once you are done, press the big orange button saying "Scrap" and wait til the 
+  scraped content shows up below the form.
 
-** Trello Board
-   URL: https://trello.com/b/wNsGCSbS/website-integrated-webscraper
        

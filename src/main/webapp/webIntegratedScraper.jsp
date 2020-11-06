@@ -16,7 +16,7 @@
     <meta name="revised" content="Monday, Nov 2th, 12:00 pm">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/stylesheet.css" >    
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/2994acdae5.js" crossorigin="anonymous"></script>
     <title>Web Integrated Scraper</title>
@@ -27,7 +27,7 @@
       <div class="container">
 	<nav class="navbar navbar-expand-md sticky-top">
           <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html"><img class="nav-logo" src="../img/Logo-Georg_GD.png"></a>
+            <a class="navbar-brand" href="../index.html"><img class="nav-logo" src="${pageContext.request.contextPath}/resources/img/Logo-Georg_GD.png"></a>
             <button type="button" class="navbar-toggler custome-toggler" data-toggle="collapse" data-target="#navbar-responsive">
               <span class="navbar-toggler-icon"><i class="fas fa-bars fa-1x"></i></span>
             </button>
@@ -55,7 +55,7 @@
       </div>
     </div>
 
-    <h1 class="font-weight-bold text-center mt-4 display-3">Web Integrated<span class="orange">Scraper</span></h1>
+    <h1 class="font-weight-bold text-center mt-4 display-3">Web Integrated <span class="orange">Scraper</span></h1>
     <div class="container mt-3">
       
       <form action="scrap">
@@ -78,7 +78,7 @@
 	</div>
 	<div class="row">
 	  <div class="col-sm-3"></div>
-	  <button type="submit" class="btn btn-primary col-sm-3">Scrap</button>
+	  <button type="submit" class="btn orange-bg text-white col-sm-3"><b>Scrap</b></button>
 	</div>
       </form>
 	
