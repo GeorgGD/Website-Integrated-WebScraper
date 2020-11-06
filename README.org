@@ -4,12 +4,12 @@
   it isn't meant to be a product or used for sophisticated projects. 
   
 ** Dependencies
-   Junit
-   Maven
-   Selenium
-   Extent Report
-   Spring Framework
-   javax.servlet 
+  - Junit
+  - Maven
+  - Selenium
+  - Extent Report
+  - Spring Framework
+  - javax.servlet 
 
 ** How to run the demo 
   If you would like to run this project on your computer make sure you are using a
