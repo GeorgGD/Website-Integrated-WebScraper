@@ -37,7 +37,6 @@ class SeleniumDriver implements DriverManager{
 	public void goToUrl(String url) throws URLNotFoundException {
 		try{
 			webDriver.get(url);
-			// TODO: Needs to handles incorrect url and when url doesn't lead to a website
 		} catch (WebDriverException e) {
 			// log exception...
 			String msg = "Incorrect url: " + url + "\n" + e;
