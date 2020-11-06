@@ -27,7 +27,7 @@
       <div class="container">
 	<nav class="navbar navbar-expand-md sticky-top">
           <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html"><img class="nav-logo" src="../img/Logo-Georg_GD.png"></a>
+            <a class="navbar-brand" href="../index.html"><img class="nav-logo" src="${pageContext.request.contextPath}/resources/img/Logo-Georg_GD.png"></a>
             <button type="button" class="navbar-toggler custome-toggler" data-toggle="collapse" data-target="#navbar-responsive">
               <span class="navbar-toggler-icon"><i class="fas fa-bars fa-1x"></i></span>
             </button>
