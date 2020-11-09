@@ -58,7 +58,7 @@
     <h1 class="font-weight-bold text-center mt-4 display-3">Web Integrated <span class="orange">Scraper</span></h1>
     <div class="container mt-3">
       
-      <form action="scrap">
+      <form action="scrap" method="post">
 	<div class="form-group row">
 	  <label for="url" class="col-sm-3 col-form-label">URL: </label>
 	  <input class="form-control col-sm-3" type="text" name="url" placeholder="https://foobar.com/"><br>
