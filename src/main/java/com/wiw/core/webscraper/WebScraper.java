@@ -1,5 +1,8 @@
 package com.wiw.core.webscraper;
 
+import java.io.File;
+import java.net.URL;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -57,7 +60,10 @@ public class WebScraper {
 	 * @return The web driver	
 	 */
 	private WebDriver setupWebDriver(ChromeOptions options) {
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
+		File file = new File(getClass().getClassLoader().getResource("/chromedriver").getFile());
+		String path = file.getPath();
+		
+		System.setProperty("webdriver.chrome.driver", path);
 		WebDriver driver = new ChromeDriver(options);		
 		return driver;
 	}

@@ -68,7 +68,7 @@ public class WebScraperController {
 	 * @return the modefied model and view	
 	 */	
 	private ModelAndView setupModelAndView(ModelAndView mav, String scrapedStr) {
-		mav.setViewName("webIntegratedScraper.jsp");
+		mav.setViewName("webIntegratedScraper");
 		mav.addObject("scrapResult", scrapedStr);		
 		return mav;
 	}
