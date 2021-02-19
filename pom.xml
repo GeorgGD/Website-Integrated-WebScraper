@@ -89,7 +89,7 @@
   </dependencies>
 
   <build>
-<pluginManagement>
+  
     <plugins>
       <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
@@ -116,9 +116,23 @@
 	<artifactId>maven-antrun-plugin</artifactId>
 	<version>1.8</version>
 	<executions>
+
+	  <execution>
+	    <id>process-resources</id>
+	    <phase>process-resources</phase>
+	    <configuration>
+	      <target>
+		<chmod file="target/classes/chromedriver" perm="755"/>
+	      </target>
+	    </configuration>
+	    <goals>
+	      <goal>run</goal>
+	    </goals>
+	  </execution> 
+
            <execution>
-            <id>process-test-classes</id>
-            <phase>process-test-classes</phase>
+            <id>process-test-resources</id>
+            <phase>process-test-resources</phase>
             <configuration>
               <target>
                 <chmod file="target/test-classes/chromedriver" perm="755"/>
@@ -129,23 +143,11 @@
             </goals>
           </execution>
 
-	  <execution>
-	    <id>compile</id>
-	    <phase>compile</phase>
-	    <configuration>
-	      <target>
-		<chmod file="target/classes/chromedriver" perm="755"/>
-	      </target>
-	    </configuration>
-	    <goals>
-	      <goal>run</goal>
-	    </goals>
-	  </execution> 
 	</executions>
       </plugin>
 
     </plugins>
-    </pluginManagement>
+
   </build>
   
 </project>
